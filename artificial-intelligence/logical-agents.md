@@ -81,7 +81,7 @@ Key aspects of any logic:
 
 ### Semantics of Propositional Logic
 
-Each **model** in propositional logic assigns a truth value (true or false) to every proposition symbol. For instance, if we have symbols $P_{1,2}$, $P_{2,2}$, $P_{3,1}$, a model could be {$P_{1,2}$ = false, $P_{2,2}$ = true, $P_{3,1}$ = false}.
+Each **model** in propositional logic assigns a truth value (true or false) to every proposition symbol. For instance, if we have symbols $P_{1,2}$, $P_{2,2}$, $P_{3,1}$, a model could be `{$P_{1,2}$ = false, $P_{2,2}$ = true, $P_{3,1}$ = false}`.
 The truth of complex sentences is determined using truth tables for the connectives.
 
 **Wumpus World Sentences in Propositional Logic**:

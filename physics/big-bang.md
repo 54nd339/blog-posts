@@ -417,9 +417,10 @@ The eon of "visible life," characterized by abundant fossils and the diversifica
 And here's a glimpse of how our continents have danced around over the past billion years!
 
 <video controls autoplay loop>
-  <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/f/f2/Tectonic_plate_model_1Ga.webm/Tectonic_plate_model_1Ga.webm.480p.vp9.webm" type="video/webm">
+  <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/f/f2/Tectonic_plate_model_1Ga.webm/Tectonic_plate_model_1Ga.webm.480p.vp9.webm" type="video/webm" />
   Your browser does not support the video tag.
 </video>
+
 *(Video: Animation showing tectonic plate movement over the last billion years.)*
 
 ---

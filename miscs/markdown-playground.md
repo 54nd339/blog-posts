@@ -295,7 +295,7 @@ Paragraph:
 
     Code
 
-<!-- -->
+{/* */}
 
     Paragraph:
 

@@ -33,7 +33,7 @@ Unlike standard search problems where a state is a "black box," in CSPs, the sta
 ### Example: Map-Coloring ️
 A classic CSP is map coloring. The task is to color regions on a map such that no two adjacent regions have the same color.
 * **Variables**: The regions (e.g., WA, NT, Q, NSW, V, SA, T for Australia).
-* **Domains**: The set of available colors for each region (e.g., {red, green, blue}).
+* **Domains**: The set of available colors for each region (e.g., `{red, green, blue}`).
 * **Constraints**: Adjacent regions must have different colors (e.g., WA $\neq$ NT).
 A solution would be an assignment of colors to all regions that satisfies these constraints, like WA = red, NT = green, etc..
 
@@ -71,7 +71,7 @@ Cryptarithmetic puzzles are another common example of CSPs.
 ```
 
 * **Variables**: F, T, U, W, R, O (in TWO + TWO = FOUR example from slides) or S, E, N, D, M, O, R, Y and carry bits $X_1, X_2, X_3$ (for SEND+MORE=MONEY).
-* **Domains**: {0, 1, ..., 9} for each letter.
+* **Domains**: `{0, 1, ..., 9}` for each letter.
 * **Constraints**:
     * `Alldiff(letters)`: Each letter must have a unique digit.
     * Arithmetic constraints for each column (e.g., O + O = R + 10 * $X_1$ for TWO+TWO=FOUR, or D + E = Y + 10 * $C_1$ for SEND+MORE=MONEY ).

@@ -22,7 +22,7 @@ The lexical analyzer is the first phase of a compiler. Its main task is to read 
 Think of it this way:
 * **Source Code:** `if (x1 * x2 < 1.0) {`
 * **Lexemes:** `if`, `(`, `x1`, `*`, `x2`, `<`, `1.0`, `)`, `{`
-* **Tokens:** `<keyword, if>`, `<lparen>`, `<id, x1>`, `<op, multiply>`, `<id, x2>`, `<op, less_than>`, `<float_literal, 1.0>`, `<rparen>`, `<lbrace>`
+* **Tokens:** ``<keyword, if>``, ``<lparen>``, ``<id, x1>``, ``<op, multiply>``, ``<id, x2>``, ``<op, less_than>``, ``<float_literal, 1.0>``, ``<rparen>``, ``<lbrace>``
 
 Beyond this primary task of tokenization, the lexical analyzer often handles other important duties:
 
@@ -40,7 +40,7 @@ Sometimes, lexical analysis is itself divided into two sub-processes:
 Let's clarify these three important terms:
 
 * **Token:** A token is a pair consisting of a *token name* and an optional *attribute value*. The token name is an abstract symbol representing a kind of lexical unit (e.g., `keyword`, `identifier`, `operator`, `number`). The attribute value provides additional information about the specific instance of the token (e.g., for an `identifier` token, the attribute might be a pointer to its symbol table entry; for a `number` token, it might be the numeric value itself).
-    * Example: `<id, "score">`, `<number, 3.14159>`, `<keyword, "if">`
+    * Example: ``<id, "score">``, ``<number, 3.14159>``, ``<keyword, "if">``
 * **Lexeme:** A lexeme is a sequence of characters in the source program that matches the pattern for a token and is identified by the lexical analyzer as an instance of that token.
     * Example: `score` is a lexeme for the token `id`. `3.14159` is a lexeme for the token `number`. `if` is a lexeme for the token `keyword`.
 * **Pattern:** A pattern is a description of the form that the lexemes of a token may take. It's a rule that defines the set of strings that can represent a particular token.
@@ -149,15 +149,15 @@ graph LR
   F -- "other" --> H(("* > [relop, GT]"))
 ```
 
-From the start state, if we see <, we go to state A.
+From the start state, if we see `<`, we go to state A.
 
-From state A, if we see =, we've found the lexeme <= (token relop, LE). This is an accepting state.
+From state A, if we see `=`, we've found the lexeme `<=` (token `relop, LE`). This is an accepting state.
 
-From state A, if we see >, we've found <> (token relop, NE). Accepting state.
+From state A, if we see `>`, we've found `<>` (token `relop, NE`). Accepting state.
 
-From state A, if we see any other character, it means we've just recognized < (token relop, LT). We need to retract the input pointer (indicated by *) because the "other" character belongs to the next lexeme. This is an accepting state.
+From state A, if we see any other character, it means we've just recognized `<` (token `relop, LT`). We need to retract the input pointer (indicated by `*`) because the "other" character belongs to the next lexeme. This is an accepting state.
 
-Similar logic applies for =, >, and >=.
+Similar logic applies for `=`, `>`, and `>=`.
 
 **How Lexers Use Transition Diagrams:**
 

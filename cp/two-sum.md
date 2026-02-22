@@ -16,9 +16,9 @@ You can return the answer in any order. come up with an algorithm that is less t
 
 ## Constraints:
 
-- 2 <= nums.length <= 104
-- -109 <= nums[i] <= 109
-- -109 <= target <= 109
+- $2 \le \text{nums.length} \le 10^4$
+- $-10^9 \le \text{nums}[i] \le 10^9$
+- $-10^9 \le \text{target} \le 10^9$
 - Only one valid answer exists.
 
 ## Examples
