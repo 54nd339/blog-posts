@@ -11,5 +11,6 @@ This repo is a shared content library of ~290 technical blog posts (Markdown + i
 - **Per post: wide latitude.** Refocus a "god blog" post to one topic, split it into a focused series, re-voice and re-structure freely, and reshape the maths (simplify, reassign variables, generalise) — but *cleaner, never shallower*: no skipped steps, no lost rigor. Trimming length is hype and repetition only, never depth.
 - **Adding is allowed; fabricating is not.** Textbook-standard facts and real, attributed quotes are fine. Never invent a fact, date, quote, or benchmark — leave a `<!-- TODO -->` and say so.
 - **Never change `date`, `slug`, or an existing filename.** The site's routing and inbound links depend on them. New split-part files take `slug: /<category>/<name>`. Moving a post into a subcategory folder (`git mv`, filename and `slug` unchanged) is fine — routing is by `slug`, not path.
+- **YAML-safe frontmatter.** Unquoted scalars with `: ` break `js-yaml` and abort the main-site build. Prefer a double-quoted single-line `description` (see `.cursor/rules/yaml-frontmatter.mdc` and `blog-craft` → `frontmatter-and-tags.md`).
 - Flip `draft: true → false` only when a post passes the skill's per-post checklist.
 - `miscs/markdown-playground.md` is a rendering test, not a post — leave it.

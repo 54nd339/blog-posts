@@ -19,9 +19,7 @@ file lives in.
 ```yaml
 ---
 title: Concept - the angle on it
-description: >-
-  One to three sentences. What the post covers and why it's worth reading.
-  A standalone blurb (used as the card text and meta description).
+description: "One to three sentences. What the post covers and why it's worth reading. A standalone blurb (used as the card text and meta description)."
 date: 2023-01-07          # original publish date — never change
 draft: false              # false only once the post passes the checklist
 slug: /maths/vectors            # /<category>/<name> — never change
@@ -60,6 +58,7 @@ Rework:
 - Says what's covered **and** why a reader would want it. Concrete nouns.
 - Written as a blurb about the post, not an announcement: no "This post delves into", "In this article we", "Join me as we explore", "Ever wondered".
 - No emoji. Ends with a period.
+- **YAML-safe.** Prefer a double-quoted single-line `description`. An unquoted value that contains `: ` (e.g. `show it: reduce…`, `not a WAF: parameterized…`) is invalid YAML — `gray-matter` / `js-yaml` throw and the main-site `next build` fails while collecting page data. Escape internal `"` as `\"`. Do not use `>-` / `|` for descriptions.
 - The current descriptions are mostly serviceable but wordy and "delve"-heavy; tighten rather than replace wholesale.
 
 Before:

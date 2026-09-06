@@ -1,6 +1,6 @@
 ---
 title: Decidability and Reducibility - The Halting Problem and Beyond
-description: Some questions have no algorithm - not because we are not clever enough, but provably. This is how you show it: reduce a problem already known to be unsolvable to the one in front of you, lean on Rice's theorem for anything about program behaviour, and place the rest on the ladder of the arithmetical hierarchy.
+description: "Some questions have no algorithm - not because we are not clever enough, but provably. This is how you show it: reduce a problem already known to be unsolvable to the one in front of you, lean on Rice's theorem for anything about program behaviour, and place the rest on the ladder of the arithmetical hierarchy."
 date: 2023-01-26
 draft: false
 slug: /automata/decidability

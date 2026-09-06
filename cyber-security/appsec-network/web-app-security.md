@@ -1,6 +1,6 @@
 ---
 title: Web Application Security - The OWASP Top 10 in Depth
-description: The defensive view of the vulnerability classes that dominate web compromise. Each has one root cause - input treated as code or as a capability - and one real fix that is not a WAF: parameterized queries, contextual encoding, deny-by-default access control, and not deserializing untrusted data.
+description: "The defensive view of the vulnerability classes that dominate web compromise. Each has one root cause - input treated as code or as a capability - and one real fix that is not a WAF: parameterized queries, contextual encoding, deny-by-default access control, and not deserializing untrusted data."
 date: 2023-09-03
 draft: false
 slug: /cyber-security/web-app-security

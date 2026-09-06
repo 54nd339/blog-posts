@@ -1,0 +1,30 @@
+---
+description: Keep Markdown YAML frontmatter parseable so the main-site build does not fail
+globs: "**/*.md"
+alwaysApply: false
+---
+
+# YAML frontmatter safety
+
+The consumer site parses every post with `gray-matter` / `js-yaml`. A single bad frontmatter aborts `next build` (`Failed to collect page data for /citadel/...`).
+
+## Required
+
+- Keep the six keys in order: `title`, `description`, `date`, `draft`, `slug`, `tags`.
+- Prefer a **double-quoted single-line** `description` (always fine; required when the value has special YAML characters):
+
+```yaml
+description: "One to three sentences. Colons like fix: do X are safe here."
+```
+
+- Escape internal double quotes as `\"`. Always quote when the value contains `: `, `#`, `{`, `}`, `[`, `]`, `*`, `&`, `!`, `|`, `>`, `%`, `@`, or `` ` ``.
+
+## Forbidden
+
+- Unquoted single-line values that contain `: ` (YAML treats that as a nested mapping and the build dies), e.g. `description: ... show it: reduce ...`.
+- Unquoted values that start with `{`, `[`, `*`, `&`, `!`, `|`, `>`, `%`, `@`, or `` ` ``.
+- Folded/block scalars (`>-`, `|`) for `description` — keep it one quoted line.
+
+## Before finishing an edit
+
+If the description has a colon (or any character above), double-quote the whole line. When unsure, quote.
